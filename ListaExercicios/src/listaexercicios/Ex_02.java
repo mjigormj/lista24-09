@@ -16,9 +16,9 @@ public class Ex_02 {
 
         sf = (sal / 100) * 30;
 
-        if (sf <= cred) {
+        if (cred <= sf) {
             JOptionPane.showMessageDialog(null, "Seu credito foi aceito");
-        } else if(sf > cred){
+        } else if(cred > sf){
             JOptionPane.showMessageDialog(null, "Seu credito foi negado");
             
         }

@@ -1,0 +1,27 @@
+package listaexercicios;
+import javax.swing.*;
+
+public class Ex_11 {
+    public static void main(String[] args) {
+        String senha, a, conf;
+        
+        double n1, n2, res;
+        
+        senha = JOptionPane.showInputDialog(null, "Digite uma senha:");
+        
+        a = JOptionPane.showInputDialog(null, "Digite o primeiro numero:");
+        n1 = Double.parseDouble(a);
+        
+        a = JOptionPane.showInputDialog(null, "Digite o segundo valor: ");
+        n2 = Double.parseDouble(a);
+        
+        res = n1/n2;
+        
+        conf = JOptionPane.showInputDialog(null, "Confirme sua senha:");
+        if (conf == senha){
+            JOptionPane.showMessageDialog(null, "O resultado da conta é:" + res);
+        }else{JOptionPane.showMessageDialog(null, "!!!A senha digitada esta errada!!!");
+        System.exit(0);}
+        
+    }
+}

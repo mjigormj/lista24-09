@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class Ex_06 {
     public static void main(String[] args) {
-        int dia, mes = 0, ano, ab, diaatu, mesatu, anoatu, dpe=0, dpa=0, idade, dvv;
+        int dia, mes = 0, ano, ab=0, diaatu, mesatu, anoatu, dpe=0, dpa=0, idade, dvv;
         String a;
         
         /*dados de nascimento*/
@@ -29,20 +29,7 @@ public class Ex_06 {
         a = JOptionPane.showInputDialog(null, "Qual o ano atual?");
         anoatu = Integer.parseInt(a);
 
-        if (ano == anoatu  && idade5%4==0 && mes < 3) {
-            ab = 1;
-        } else {
-        
-        ab = anoatu - ano;
-        int cont = 0;
-        while (cont == 0) {
-            if (ab % 4 == 0) {
-                cont++;
-                ab = ab / 4;
-            } else {
-                ab++;
-            }
-        }}
+
             
         for(int i=1;i < mes;i++){
             switch(i){
@@ -61,7 +48,7 @@ public class Ex_06 {
             }
         }
         
-        for(int i=1;i < mesatu;i++){
+        for(int i=1;i < mesatu; i++){
             switch(i){
                 case 1: dpa += 31;break;    /*Janeiro*/
                 case 2: dpa +=28;break;
@@ -77,22 +64,29 @@ public class Ex_06 {
                 case 12: dpa += 31;break;   /*Dezembro*/
             }
         }
-            
-        System.out.println("Anos bissextos: " + ab);
 
-        dpe += dia;
-        System.out.println("meses mais dias: " + dpe);
-
-        idade = anoatu - ano;
-        System.out.println("idade: " + idade);
-
-        System.out.println("dias deste ano " + dpa);
+        if (ano == anoatu && ano % 4 == 0 && mes < 3) {
+            ab++;
+        } else {
+            int apoio = ano;
+            while (apoio <= anoatu) {
+                if (apoio % 4 == 0) {
+                    ab++;
+                    apoio++;
+                } else {
+                    apoio++;
+                }
+            }
+        }
         
+        dpe += dia;
+        idade = anoatu - ano;
         dvv = idade * 365;
         dvv -= dpe;
-        dvv += dpa;
+        dvv = dvv + dpa + diaatu;
         dvv += ab;
-
-        System.out.println("dias vividos: " + dvv);
+        
+        JOptionPane.showMessageDialog(null, "Você viveu "+ dvv +" dias.");
     }
 }
+

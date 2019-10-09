@@ -8,7 +8,7 @@ public class Ex_01 {
         String a;
         double sf, sal, pc;
         try {
-            a = JOptionPane.showInputDialog(null, "Digite seu salario: ");
+            a = JOptionPane.showInputDialog(null, "Digite seu salário: ");
             sal = Double.parseDouble(a);
 
             a = JOptionPane.showInputDialog(null, "Digite a porcentagem de aumento: ");
@@ -16,11 +16,11 @@ public class Ex_01 {
 
             sf = sal + (sal / 100) * pc;
 
-            JOptionPane.showMessageDialog(null, "O novo salario sera: R$" + sf);
+            JOptionPane.showMessageDialog(null, "O novo salário será: R$" + sf);
         } catch (NumberFormatException erro) {
-            JOptionPane.showMessageDialog(null, "Houve erro na conversao, digite apenas caracteres numericos");
+            JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numéricos");
         } catch (NullPointerException erro) {
-            JOptionPane.showMessageDialog(null, "Obrigado, por utilizar nosso sistema");
+            JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso sistema!");
         }
         System.exit(0);
     }

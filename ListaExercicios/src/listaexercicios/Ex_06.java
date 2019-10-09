@@ -14,7 +14,7 @@ public class Ex_06 {
             a = JOptionPane.showInputDialog(null, "Qual dia você nasceu?");
             dia = Integer.parseInt(a);
 
-            a = JOptionPane.showInputDialog(null, "Qual mes você nasceu?");
+            a = JOptionPane.showInputDialog(null, "Qual mês você nasceu?");
             mes = Integer.parseInt(a);
 
             a = JOptionPane.showInputDialog(null, "Qual ano você nasceu?");
@@ -26,7 +26,7 @@ public class Ex_06 {
             a = JOptionPane.showInputDialog(null, "Qual dia é hoje?");
             diaatu = Integer.parseInt(a);
 
-            a = JOptionPane.showInputDialog(null, "Qual e o mes atual?");
+            a = JOptionPane.showInputDialog(null, "Qual e o mês atual?");
             mesatu = Integer.parseInt(a);
 
             a = JOptionPane.showInputDialog(null, "Qual o ano atual?");
@@ -91,7 +91,7 @@ public class Ex_06 {
             JOptionPane.showMessageDialog(null, "Você viveu " + dvv + " dias.");
        
         } catch (NumberFormatException erro) {
-            JOptionPane.showMessageDialog(null, "Houve um erro na conversao, digite apenas caracteres numericos");
+            JOptionPane.showMessageDialog(null, "Houve um erro na conversão, digite apenas caracteres numéricos");
             
         } catch (NullPointerException erro) {
             JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso sistema!");

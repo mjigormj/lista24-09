@@ -8,7 +8,7 @@ public class L2e3 {
         double alturaInf = 0;
         char sexoInf = 0;
         int idadeInf = 0;
-        double maiorAlt = 0.0, menorAlt = 5.0, mediaAlt = 0.0, contMulher = 0;
+        double maiorAlt = 0, menorAlt = 3, mediaAlt = 0, contMulher = 0;
         int menorIdMulher = 200, maiorIdHomem = 0;
         double alt, alturas[] = new double[3];
         int ida, idades[] = new int[3];
@@ -62,8 +62,8 @@ public class L2e3 {
         }
         System.out.println("A maior altura: " + maiorAlt);
         System.out.println("A menor altura: " + menorAlt);
-        System.out.println("\nA media de altura de Mulheres: " + mediaAlt / contMulher);
-        System.out.println("\nA idade do homem mais velho: " + maiorIdHomem);
+        System.out.println("A media de altura de Mulheres: " + mediaAlt / contMulher);
+        System.out.println("A idade do homem mais velho: " + maiorIdHomem);
         System.out.println("A idade da mulher mais nova: " + menorIdMulher);
 
     }

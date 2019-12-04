@@ -9,6 +9,8 @@ public class L2e2 {
         int al, nt, apr = 0, exa = 0, rep = 0;
         Double msl = 0.0, nota[][] = new Double[6][4], n1, n2;
 
+        
+        try{
             /*entrada de alunos e notas*/
             for (al = 0; al < 6; al++) {
                 alunos[al][1] = JOptionPane.showInputDialog(null, "Digite o nome do " + (al + 1) + "º aluno");
@@ -55,5 +57,11 @@ public class L2e2 {
                     + "Reprovados: " + rep);
 
         
+        } catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null, "Não coloque letras no local das notas.");
+        } catch (NullPointerException erro) {
+            JOptionPane.showMessageDialog(null, "Obrigado, por utilizar nosso sistema");
+        }
+        System.exit(0);
     }
 }

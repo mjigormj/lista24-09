@@ -16,12 +16,12 @@ public class Ex_09 {
 
             volume = (ra * ra) * pi * al;
 
-            JOptionPane.showMessageDialog(null, "Volume: " + volume + "cm");
+            JOptionPane.showMessageDialog(null, "Volume: " + volume + " cm");
         } catch (NumberFormatException erro) {
-            JOptionPane.showMessageDialog(null, "Houve erro na conversao, digite apenas caracteres numericos");
+            JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numéricos.");
         } catch (NullPointerException erro) {
-            JOptionPane.showMessageDialog(null, "Obrigado, por utilizar nosso sistema");
+            JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso sistema!");
         }
-        System.exit(0);
+
     }
 }

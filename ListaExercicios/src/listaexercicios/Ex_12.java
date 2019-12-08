@@ -9,21 +9,22 @@ public class Ex_12 {
         String a;
         int n = 0, ant = 0, suc = 0;
         try {
-            a = JOptionPane.showInputDialog(null, "Digite um numero inteiro: ");
+            a = JOptionPane.showInputDialog(null, "Digite um número inteiro: ");
             n = Integer.parseInt(a);
 
             ant = n + 1;
             suc = n - 1;
 
-            JOptionPane.showMessageDialog(null, "O numero digitado e: " + n);
-            JOptionPane.showMessageDialog(null, "O antecessor e: " + ant);
-            JOptionPane.showMessageDialog(null, "O sucessor e: " + suc);
+            JOptionPane.showMessageDialog(null, "O número digitado é: " + n);
+            JOptionPane.showMessageDialog(null, "O antecessor é: " + ant);
+            JOptionPane.showMessageDialog(null, "O sucessor é: " + suc);
 
         } catch (NumberFormatException erro) {
-            JOptionPane.showMessageDialog(null, "Houve erro na conversao, digite apenas caracteres numericos");
+            JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numéricos.");
         } catch (NullPointerException erro) {
-            JOptionPane.showMessageDialog(null, "Obrigado, por utilizar nosso sistema");
+            JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso sistema!");
         }
-        System.exit(0);
+
     }
 }
+

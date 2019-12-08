@@ -5,6 +5,7 @@ import javax.swing.*;
 public class Ex_01 {
 
     public static void main(String[] args) {
+
         String a;
         double sf, sal, pc;
         try {
@@ -18,10 +19,10 @@ public class Ex_01 {
 
             JOptionPane.showMessageDialog(null, "O novo salário será: R$" + sf);
         } catch (NumberFormatException erro) {
-            JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numéricos");
+            JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numéricos.");
         } catch (NullPointerException erro) {
             JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso sistema!");
         }
-        System.exit(0);
+
     }
 }

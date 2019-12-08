@@ -5,11 +5,12 @@ import javax.swing.*;
 public class Ex_06 {
 
     public static void main(String[] args) {
-        int dia, mes = 0, ano, ab = 0, diaatu, mesatu, anoatu, dpe = 0, dpa = 0, idade, dvv;
+        
         String a;
+        int dia, mes = 0, ano, ab = 0, diaatu, mesatu, anoatu, dpe = 0, dpa = 0, idade, dvv;
         try {
             /*dados de nascimento*/
-            JOptionPane.showMessageDialog(null, "Digite a data referente ao seu nascimento");
+            JOptionPane.showMessageDialog(null, "Digite a data referente ao seu nascimento: ");
 
             a = JOptionPane.showInputDialog(null, "Qual dia você nasceu?");
             dia = Integer.parseInt(a);
@@ -21,7 +22,7 @@ public class Ex_06 {
             ano = Integer.parseInt(a);
 
             /*dados atuais*/
-            JOptionPane.showMessageDialog(null, "Agora Informe os dados atuais");
+            JOptionPane.showMessageDialog(null, "Agora Informe os dados atuais: ");
 
             a = JOptionPane.showInputDialog(null, "Qual dia é hoje?");
             diaatu = Integer.parseInt(a);
@@ -87,15 +88,15 @@ public class Ex_06 {
             dvv -= dpe;
             dvv = dvv + dpa + diaatu;
             dvv += ab;
-
-            JOptionPane.showMessageDialog(null, "Você viveu " + dvv + " dias.");
+            
+            JOptionPane.showMessageDialog(null, "Você viveu: " + dvv + " dias");
        
         } catch (NumberFormatException erro) {
-            JOptionPane.showMessageDialog(null, "Houve um erro na conversão, digite apenas caracteres numéricos");
+            JOptionPane.showMessageDialog(null, "Houve um erro na conversão, digite apenas caracteres numéricos.");
             
         } catch (NullPointerException erro) {
             JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso sistema!");
         }
-        System.exit(0);
+        
     }
 }

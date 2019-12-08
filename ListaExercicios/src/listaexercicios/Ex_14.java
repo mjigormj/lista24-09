@@ -7,7 +7,7 @@ public class Ex_14 {
     public static void main(String[] args) {
 
         String a, no, mida = null;
-        int ida, menor = 1000;
+        int ida, menor = 200;
         try {
             for (int i = 0; i < 10; i++) {
 
@@ -22,11 +22,10 @@ public class Ex_14 {
                 }
 
             }
-            JOptionPane.showMessageDialog(null, "A pessoa mais nova e: " + mida);
+            JOptionPane.showMessageDialog(null, "A pessoa mais nova é: " + mida);
         } catch (NullPointerException erro) {
-            JOptionPane.showMessageDialog(null, "Obrigado, por utilizar nosso sistema");
+            JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso sistema!");
         }
-        System.exit(0);
 
     }
 }

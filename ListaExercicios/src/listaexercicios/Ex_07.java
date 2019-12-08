@@ -15,12 +15,13 @@ public class Ex_07 {
             desc = produto / 100 * 9;
             produto -= desc;
 
-            JOptionPane.showMessageDialog(null, "Novo preco: " + produto);
+            JOptionPane.showMessageDialog(null, "Novo preço: R$" + produto);
         } catch (NumberFormatException erro) {
-            JOptionPane.showMessageDialog(null, "Houve erro na conversao, digite apenas caracteres numericos");
+            JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numéricos.");
         } catch (NullPointerException erro) {
-            JOptionPane.showMessageDialog(null, "Obrigado, por utilizar nosso sistema");
+            JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso sistema!");
         }
-        System.exit(0);
+        
     }
 }
+

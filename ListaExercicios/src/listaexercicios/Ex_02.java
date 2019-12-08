@@ -5,6 +5,7 @@ import javax.swing.*;
 public class Ex_02 {
 
     public static void main(String[] args) {
+
         String a;
         double sf, sal, cred;
         try {
@@ -17,16 +18,16 @@ public class Ex_02 {
             sf = (sal / 100) * 30;
 
             if (cred <= sf) {
-                JOptionPane.showMessageDialog(null, "Seu crédito foi aceito: ");
+                JOptionPane.showMessageDialog(null, "Seu crédito foi aceito.");
             } else if (cred > sf) {
-                JOptionPane.showMessageDialog(null, "Seu crédito foi negado: ");
+                JOptionPane.showMessageDialog(null, "Seu crédito foi negado.");
             }
         } catch (NumberFormatException erro) {
-            JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numéricos");
+            JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numéricos.");
         } catch (NullPointerException erro) {
             JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso sistema!");
         }
-        System.exit(0);
 
     }
 }
+

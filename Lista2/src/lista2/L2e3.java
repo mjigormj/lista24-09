@@ -2,71 +2,65 @@ package lista2;
 
 import javax.swing.*;
 
-
 public class L2e3 {
+
     public static void main(String[] args) {
-        double alturaInf = 0;
-        char sexoInf = 0;
-        int idadeInf = 0;
-        double maiorAlt = 0, menorAlt = 3, mediaAlt = 0, contMulher = 0;
-        int menorIdMulher = 200, maiorIdHomem = 0;
-        double alt, alturas[] = new double[3];
-        int ida, idades[] = new int[3];
-        String sexos[] = new String[3];
-        String a = null;
 
-        for (int i = 0; i < 3; i++) {
-            alt = i + 1;
-            a = JOptionPane.showInputDialog(null, " Digite a " + alt + " altura ");
-            alturas[i] = Double.parseDouble(a);
+        String a = null, sexoInf[] = new String[50];
+        int sex, alt, ida, idadeInf[] = new int[50], menorIdMulher = 200, maiorIdHomem = 0;
+        double alturaInf[] = new double[50], maiorAlt = 0, menorAlt = 3, mediaAlt = 0, contMulher = 0;
+        try {
+            for (int i = 0; i < 50; i++) {
 
-            if (alturaInf > maiorAlt) {
-                maiorAlt = alturaInf;
-            } else if (alturaInf < menorAlt) {
-                menorAlt = alturaInf;
-            }
+                alt = i + 1;
+                a = JOptionPane.showInputDialog(null, "Digite a " + alt + "º altura: ");
+                alturaInf[i] = Double.parseDouble(a);
 
-            boolean saida = false;
-            while (saida == false) {
-                sexos[i] = JOptionPane.showInputDialog(null, " Digite o seu sexo ");
-                
+                if (alturaInf[i] > maiorAlt) {
+                    maiorAlt = alturaInf[i];
+                } else if (alturaInf[i] < menorAlt) {
+                    menorAlt = alturaInf[i];
+                }
 
-                if ("F".equals(sexos[i])) {
-                    mediaAlt += alturaInf;
+                ida = i + 1;
+                a = JOptionPane.showInputDialog(null, "Digite a " + ida + "º idade: ");
+                idadeInf[i] = Integer.parseInt(a);
+
+                sex = i + 1;
+                sexoInf[i] = JOptionPane.showInputDialog(null, "Digite o " + sex + "º sexo: ");
+
+                if ("F".equals(sexoInf[i])) {
+                    mediaAlt += alturaInf[i];
                     contMulher++;
-                    saida = true;
-                } else if("f".equals(sexos[i])) {
-                    mediaAlt += alturaInf;
+
+                } else if ("f".equals(sexoInf[i])) {
+                    mediaAlt += alturaInf[i];
                     contMulher++;
-                    saida = true;
-                    
-                }else if ("M".equals(sexos[i])) {
-                    saida = true;
-                } else if("m".equals(sexos[i])) {
-                    saida = true;
-                }else {
-                    JOptionPane.showMessageDialog(null, "Você digitou caracteres errados!!");
+
+                } else if ("M".equals(sexoInf[i])) {
+
+                } else if ("m".equals(sexoInf[i])) {
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Houve um erro na conversão, Você digitou caracteres errados.");
+                    System.exit(0);
+                }
+
+                if (idadeInf[i] > maiorIdHomem && "M".equals(sexoInf[i]) || "m".equals(sexoInf[i])) {
+                    maiorIdHomem = idadeInf[i];
+                } else if (idadeInf[i] < menorIdMulher && "F".equals(sexoInf[i]) || "f".equals(sexoInf[i])) {
+                    menorIdMulher = idadeInf[i];
                 }
             }
+            System.out.println("A maior altura: " + maiorAlt + " cm");
+            System.out.println("A menor altura: " + menorAlt + " cm");
+            System.out.println("A média de altura de mulheres: " + mediaAlt / contMulher + " cm");
+            System.out.println("A idade do homem mais velho: " + maiorIdHomem + " anos");
+            System.out.println("A idade da mulher mais nova: " + menorIdMulher + " anos");
 
-            ida = i + 1;
-            a = JOptionPane.showInputDialog(null, " Digite a " + ida + " sua idade ");
-            idades[i] = Integer.parseInt(a);
-
-            if (idadeInf > maiorIdHomem && sexoInf == 'M' || sexoInf == 'm') {
-                maiorIdHomem = idadeInf;
-            } else if (idadeInf < menorIdMulher && sexoInf == 'F' || sexoInf == 'f') {
-                menorIdMulher = idadeInf;
-            }
-
+        } catch (NullPointerException erro) {
+            JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso sistema!");
         }
-        System.out.println("A maior altura: " + maiorAlt);
-        System.out.println("A menor altura: " + menorAlt);
-        System.out.println("A media de altura de Mulheres: " + mediaAlt / contMulher);
-        System.out.println("A idade do homem mais velho: " + maiorIdHomem);
-        System.out.println("A idade da mulher mais nova: " + menorIdMulher);
 
     }
-
 }
-

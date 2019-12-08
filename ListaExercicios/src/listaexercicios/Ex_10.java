@@ -9,22 +9,22 @@ public class Ex_10 {
         String a;
         Double tgnv, vm, dis, lu;
         try {
-            a = JOptionPane.showInputDialog("Digite o tempo gasto na viagem: ");
+            a = JOptionPane.showInputDialog(null, "Digite em horas o tempo gasto na viagem: ");
             tgnv = Double.parseDouble(a);
 
-            a = JOptionPane.showInputDialog("Digite a velocidade media: ");
+            a = JOptionPane.showInputDialog(null, "Digite a velocidade média: ");
             vm = Double.parseDouble(a);
 
             dis = tgnv * vm;
             lu = dis / 12;
 
-            JOptionPane.showMessageDialog(null, "Distancia percorrida: " + dis);
-            JOptionPane.showMessageDialog(null, "Litros usados: " + lu);
+            JOptionPane.showMessageDialog(null, "Distância percorrida: " + dis + " km");
+            JOptionPane.showMessageDialog(null, "Litros usados: " + lu + " litros");
         } catch (NumberFormatException erro) {
-            JOptionPane.showMessageDialog(null, "Houve erro na conversao, digite apenas caracteres numericos");
+            JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numéricos.");
         } catch (NullPointerException erro) {
-            JOptionPane.showMessageDialog(null, "Obrigado, por utilizar nosso sistema");
+            JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso sistema!");
         }
-        System.exit(0);
+
     }
 }

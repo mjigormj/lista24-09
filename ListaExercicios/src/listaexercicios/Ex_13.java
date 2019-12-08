@@ -19,13 +19,13 @@ public class Ex_13 {
 
                 }
             }
-            JOptionPane.showMessageDialog(null, "O numero de pessoas maiores de idade e: " + cont);
+            JOptionPane.showMessageDialog(null, "O número de pessoas maiores de idade é: " + cont);
 
         } catch (NumberFormatException erro) {
-            JOptionPane.showMessageDialog(null, "Houve erro na conversao, digite apenas caracteres numericos");
+            JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numéricos.");
         } catch (NullPointerException erro) {
-            JOptionPane.showMessageDialog(null, "Obrigado, por utilizar nosso sistema");
+            JOptionPane.showMessageDialog(null, "Obrigado por utilizar nosso sistema!");
         }
-        System.exit(0);
+        
     }
 }
